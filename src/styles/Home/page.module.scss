@@ -1,0 +1,70 @@
+@font-face {
+  font-family: Thunder;
+  src: url('/Thunder-ExtraBoldHC.ttf');
+}
+
+.HeroContainer {
+  background-color: #a3a0f7;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+
+  .OverlayText {
+    position: absolute;
+    z-index: 150;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: overlay;
+
+    .Title{
+      color: #FFF;
+      font-family: Thunder;
+      font-size: 200px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+  }
+  .AnimatedBackground {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .BlurCover {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+
+      .BlurComponent {
+        z-index: 100;
+        width: 80rem;
+        height: 100vh;
+        background: rgba(242, 234, 244, 0.01);
+        box-shadow: 34.1637px 0px 187.90036px -597.86475px rgba(0, 0, 0, 0.01) inset;
+        backdrop-filter: blur(76.86833190917969px);
+      }
+    }
+
+    .Ellipse {
+      z-index: 10;
+      animation: moveLeftRight 5s infinite alternate ease-in-out;
+      @keyframes moveLeftRight {
+        0% {
+          transform: translateX(-500px);
+        }
+        100% {
+          transform: translateX(500px);
+        }
+      }
+    }
+  }
+}
