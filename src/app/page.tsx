@@ -101,7 +101,7 @@ export default function Home() {
               <div className={styles.BlurComponent}></div>
               <div className={styles.BlurComponent}></div>
             </div>
-            <img src="/Elipse.png" className={styles.Ellipse} />
+            <img src="/Elipse.webp" className={styles.Ellipse} />
 
           </div>
         </section>
