@@ -1,0 +1,33 @@
+
+
+.NavBar {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 10rem;
+    background-color: transparent;
+    .Links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0rem;
+        mix-blend-mode: overlay;
+        .Link{
+            font-family: ThunderLC;
+            font-size: 2rem;
+            // font-weight: 700;
+            text-decoration: none;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            padding: 1rem 2rem;
+            
+        }
+    }
+}
