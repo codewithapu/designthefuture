@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Urbanist:wght@200;300;400;500;600;700;800;900&display=swap');
+
 @font-face {
-  font-family: ThunderLC;
-  src: url("/Thunder-LightLC.otf");
+  font-family: DTF Bold;
+  src: url(../../public/Fonts/NyghtSerif-MediumItalic.ttf);
+}
+
+@font-face {
+  font-family: DTF Regular;
+  src: url(../../public/Fonts/NyghtSerif-RegularItalic.ttf);
 }
 
 ::selection{

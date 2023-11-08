@@ -1,5 +1,9 @@
 $SlateDark: #141115;
 
+.Avatar{
+    border-radius: 10rem;
+}
+
 .NavBar {
     position: fixed;
     top: 0;
@@ -7,7 +11,7 @@ $SlateDark: #141115;
     width: 100%;
     box-sizing: border-box;
     z-index: 200;
-    border-bottom: 2px solid #E0E3FF;
+    border-bottom: 1px solid #E0E3FF;
 
     .NavBarContent {
         // margin: 2rem;
@@ -16,8 +20,8 @@ $SlateDark: #141115;
         justify-content: space-between;
         flex-direction: row;
         padding: 1rem 2rem 1rem 2rem;
-        background-color: #edfb01;
-        background-color: #fff;
+        backdrop-filter: saturate(180%) blur(20px);
+        background-color: #fbfbfdcc;
         gap: 5rem;
         .Logo {
             height: 4rem;

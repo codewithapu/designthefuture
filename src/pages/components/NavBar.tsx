@@ -1,9 +1,17 @@
 import Link from 'next/link'
 import styles from "../../styles/Components/NavBar.module.scss"
-
+import { useSession, signIn } from 'next-auth/react'
+import React from 'react';
+import Image from 'next/image';
 
 export default function NavBar() {
+    const { data: session } = useSession()
 
+    const handleAvatarClick = () => {
+        if (!session) {
+            signIn()
+        }
+    }
     return (
 
         <div className={styles.NavBar}>
@@ -17,7 +25,7 @@ export default function NavBar() {
 
                 <div className={styles.Buttons}>
 
-                    <Link href="#" className={styles.Button}>
+                    <Link href="/" className={styles.Button}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 58 58" fill="none">
                             <circle cx="29.5" cy="29.5" r="17.25" stroke="#111111" stroke-width="2.5" />
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M38.5 20.5L25.5 25L20.5 38.5L34 33.5L38.5 20.5ZM29.5 32C30.8807 32 32 30.8807 32 29.5C32 28.1193 30.8807 27 29.5 27C28.1193 27 27 28.1193 27 29.5C27 30.8807 28.1193 32 29.5 32Z" fill="#111111" />
@@ -36,11 +44,28 @@ export default function NavBar() {
                         </svg>
                     </Link>
 
-                    <Link href="#" className={styles.Button}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 58 58" fill="none">
-                            <path d="M28.3989 11.2256C23.4136 11.2256 19.3446 15.2947 19.3446 20.2799C19.3446 25.2651 23.4136 29.3341 28.3989 29.3341C33.3841 29.3341 37.4531 25.2651 37.4531 20.2799C37.4531 15.2947 33.3841 11.2256 28.3989 11.2256ZM28.3989 13.8126C31.986 13.8126 34.8662 16.6927 34.8662 20.2799C34.8662 23.867 31.986 26.7472 28.3989 26.7472C24.8117 26.7472 21.9315 23.867 21.9315 20.2799C21.9315 16.6927 24.8117 13.8126 28.3989 13.8126ZM19.3446 31.9211C14.3509 31.9211 10.2903 35.9817 10.2903 40.9754V47.4427H11.5838H46.5074V40.9754C46.5074 35.9817 42.4469 31.9211 37.4531 31.9211H19.3446ZM19.3446 34.5081H37.4531C41.0584 34.5081 43.9205 37.3701 43.9205 40.9754V44.8559H12.8772V40.9754C12.8772 37.3701 15.7393 34.5081 19.3446 34.5081Z" fill="#151515" />
-                        </svg>
-                    </Link>
+
+                    <div onClick={handleAvatarClick}>
+                        {session?.user?.image ? (
+                            <Link href="/profile" className={styles.Button}>
+                                <Image
+                                    className={styles.Avatar}
+                                    src={session.user.image}
+                                    alt="User avatar"
+                                    width={35}
+                                    height={35}
+                                />
+                            </Link>
+                        ) : (
+                            <Link href="/login" className={styles.Button}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 58 58" fill="none">
+                                    <path d="M28.3989 11.2256C23.4136 11.2256 19.3446 15.2947 19.3446 20.2799C19.3446 25.2651 23.4136 29.3341 28.3989 29.3341C33.3841 29.3341 37.4531 25.2651 37.4531 20.2799C37.4531 15.2947 33.3841 11.2256 28.3989 11.2256ZM28.3989 13.8126C31.986 13.8126 34.8662 16.6927 34.8662 20.2799C34.8662 23.867 31.986 26.7472 28.3989 26.7472C24.8117 26.7472 21.9315 23.867 21.9315 20.2799C21.9315 16.6927 24.8117 13.8126 28.3989 13.8126ZM19.3446 31.9211C14.3509 31.9211 10.2903 35.9817 10.2903 40.9754V47.4427H11.5838H46.5074V40.9754C46.5074 35.9817 42.4469 31.9211 37.4531 31.9211H19.3446ZM19.3446 34.5081H37.4531C41.0584 34.5081 43.9205 37.3701 43.9205 40.9754V44.8559H12.8772V40.9754C12.8772 37.3701 15.7393 34.5081 19.3446 34.5081Z" fill="#151515" />
+                                </svg>
+                            </Link>
+                        )}
+
+                    </div>
+
                 </div>
 
 

@@ -1,12 +1,10 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import Head from 'next/head'
 import styles from '../styles/Home/Home.module.scss'
-import NavBar from '@/pages/components/NavBar'
-import React from 'react'
-
-
+import React, { useState } from "react";
+import { auth } from '../supabase';
 export default function Home() {
+  
   return (
     <>
       <Head>
@@ -37,7 +35,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <Link href="/" className={styles.Register}>
+              <Link href="/designscape" className={styles.Register}>
                 grab YOUR seat
               </Link>
             </div>
@@ -84,6 +82,16 @@ export default function Home() {
             </div>
           </div>
 
+        </div>
+
+        <div className={styles.Products}>
+          <div className={styles.Container}>
+            <img className={styles.Banner} src="/Images/HistoryShow.png" />
+          </div>
+
+          <div className={styles.Container}>
+            <img className={styles.Banner} src="/Images/HistoryShow.png" />
+          </div>
         </div>
       </div>
 

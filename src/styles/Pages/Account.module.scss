@@ -1,0 +1,77 @@
+.Wraper {
+    margin-top: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    gap: 20px;
+    .UserBadge {
+        .ProfilePIC {
+            border-radius: 300px;
+        }
+        .Badge {
+            position: absolute;
+            transform: translateY(60px);
+            svg {
+                height: 40px;
+                width: auto;
+            }
+        }
+    }
+
+    .UserDetails {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        .BadgeLabel {
+            text-transform: uppercase;
+            color: #787878;
+            font-family: Plus Jakarta Sans;
+            font-size: 0.9rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%; /* 0.9rem */
+            letter-spacing: 0.09rem;
+        }
+        .UserName {
+            color: rgba(255, 255, 255, 0.8);
+            font-family: Urbanist;
+            font-size: 2.1412rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 100%; /* 2.1412rem */
+            letter-spacing: -0.0428rem;
+            text-transform: lowercase;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            .Verified {
+                height: 13px;
+                width: 13px;
+            }
+        }
+    }
+
+    .LogoutBTN {
+        color: #fff;
+        font-family: Plus Jakarta Sans;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 100.5%; /* 1.407rem */
+        letter-spacing: 0.07rem;
+        text-transform: uppercase;
+        padding: 1.6rem 10rem;
+
+        border: none;
+        background-color: #ff1d1d;
+        &:hover {
+            // background: $SlateCarbon;
+            background-color: #ff0000;
+            cursor: pointer;
+        }
+    }
+}
