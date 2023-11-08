@@ -1,7 +1,5 @@
 import styles from "@/styles/Pages/designscape.module.scss"
 import { useSession } from 'next-auth/react'
-import QRCode from 'react-qr-code';
-import TicketApplicationForm from '@/pages/components/TicketApplicationForm'
 import Script from "next/script";
 
 export default function DesignScape() {
