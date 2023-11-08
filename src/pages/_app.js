@@ -1,6 +1,8 @@
+import '../styles/Globals.scss'
 import { SessionProvider } from 'next-auth/react';
 import NavBar from './components/NavBar';
-import '../styles/Globals.css' 
+
+
 
 function DTF({ Component, pageProps, router }) {
   const baseUrl = "https://designthefuture.in";
