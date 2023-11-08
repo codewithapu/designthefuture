@@ -7,7 +7,7 @@ import styles from '../styles/Home/page.module.scss'
 import NavBar from '@/pages/components/NavBar'
 
 export const metadata: Metadata = {
-  title: 'DTF Home',
+  title: 'Design The Future',
   description: 'Design The Future',
 }
 

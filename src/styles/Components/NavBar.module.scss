@@ -1,33 +1,63 @@
-
+$SlateDark: #141115;
 
 .NavBar {
     position: fixed;
-    top: 0%;
-    left: 0;
+    top: 0;
+
     width: 100%;
     box-sizing: border-box;
     z-index: 200;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem 10rem;
-    background-color: transparent;
-    .Links{
+    border-bottom: 2px solid #E0E3FF;
+
+    .NavBarContent {
+        // margin: 2rem;
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 0rem;
-        mix-blend-mode: overlay;
-        .Link{
-            font-family: ThunderLC;
-            font-size: 2rem;
-            // font-weight: 700;
-            text-decoration: none;
-            color: #ffffff;
-            text-transform: uppercase;
-            letter-spacing: 0.1rem;
-            padding: 1rem 2rem;
-            
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 1rem 2rem 1rem 2rem;
+        background-color: #edfb01;
+        background-color: #fff;
+        gap: 5rem;
+        .Logo {
+            height: 4rem;
+        }
+
+        .SearchBox {
+            cursor: pointer;
+            display: flex;
+            width: 100%;
+            max-width: 60rem;
+            padding: 1.1rem 1rem;
+            align-items: center;
+            gap: 0.5rem;
+            flex-shrink: 0;
+
+            border-radius: 1.5rem;
+            background: #F0F0F0;
+
+            color: #9898A3;
+            // text-transform: lowercase;
+            font-family: Plus Jakarta Sans;
+            // font-family: Inter;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: -0.02rem;
+            line-height: 100%; /* 1.092rem */
+            transition: 0.2s ease-in-out;
+            &:hover {
+                background: #F0F0F0;
+            }
+        }
+
+        .Buttons{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            .Button{
+                padding: 0.5rem;
+            }
         }
     }
 }
