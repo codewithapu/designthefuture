@@ -1,4 +1,4 @@
-import '@/styles/Globals.css';
+import '@/styles/globals.module.scss'
 import { SessionProvider } from 'next-auth/react';
 import NavBar from './components/NavBar';
 
