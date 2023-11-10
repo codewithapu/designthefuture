@@ -23,9 +23,14 @@ $SlateDark: #141115;
         backdrop-filter: saturate(180%) blur(20px);
         background-color: #fbfbfdcc;
         gap: 5rem;
-        .Logo {
-            height: 4rem;
+
+        .HomeLink{
+            text-decoration: none;
+            .Logo {
+                height: 4rem;
+            }
         }
+
 
         .SearchBox {
             cursor: pointer;

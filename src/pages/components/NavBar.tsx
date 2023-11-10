@@ -16,11 +16,14 @@ export default function NavBar() {
 
         <div className={styles.NavBar}>
             <nav className={styles.NavBarContent}>
-                <svg xmlns="http://www.w3.org/2000/svg" className={styles.Logo} viewBox="0 0 70 74" fill="none">
-                    <path d="M69.4853 26.2757L69.5557 0L52.4342 9.51242L52.339 16.1191L52.3816 16.0953L51.9532 69.6571L57.7155 73.0332L57.8188 42.3326L69.7047 42.2713L69.676 36.7144L57.8375 36.7755L57.9174 13.0017L63.9135 9.65089L63.9474 26.2515L69.4853 26.2757Z" fill="#141115" />
-                    <path d="M50.6723 10.5538L50.6406 17.1226L44.1064 20.7738L43.9578 64.9372L38.1634 61.5424L38.5152 23.898L31.8207 27.6387L31.8771 21.0606L50.6723 10.5538Z" fill="#141115" />
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M30.2178 22.036L0 39.1439L30.0685 56.7602L30.2178 22.036ZM25.3919 30.2732L9.59793 39.215L25.3138 48.4225L25.3919 30.2732Z" fill="#141115" />
-                </svg>
+                <Link href="/" className={styles.HomeLink}>
+                    <svg xmlns="http://www.w3.org/2000/svg" className={styles.Logo} viewBox="0 0 70 74" fill="none">
+                        <path d="M69.4853 26.2757L69.5557 0L52.4342 9.51242L52.339 16.1191L52.3816 16.0953L51.9532 69.6571L57.7155 73.0332L57.8188 42.3326L69.7047 42.2713L69.676 36.7144L57.8375 36.7755L57.9174 13.0017L63.9135 9.65089L63.9474 26.2515L69.4853 26.2757Z" fill="#141115" />
+                        <path d="M50.6723 10.5538L50.6406 17.1226L44.1064 20.7738L43.9578 64.9372L38.1634 61.5424L38.5152 23.898L31.8207 27.6387L31.8771 21.0606L50.6723 10.5538Z" fill="#141115" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M30.2178 22.036L0 39.1439L30.0685 56.7602L30.2178 22.036ZM25.3919 30.2732L9.59793 39.215L25.3138 48.4225L25.3919 30.2732Z" fill="#141115" />
+                    </svg>
+                </Link>
+
 
 
                 <div className={styles.Buttons}>
@@ -49,6 +52,7 @@ export default function NavBar() {
                         {session?.user?.image ? (
                             <Link href="/profile" className={styles.Button}>
                                 <Image
+                                    draggable="false"
                                     className={styles.Avatar}
                                     src={session.user.image}
                                     alt="User avatar"
