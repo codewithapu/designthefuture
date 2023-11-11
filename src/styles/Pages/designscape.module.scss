@@ -1,6 +1,28 @@
-.Wraper {
-    margin-top: 9rem;
+@mixin TextM {
+    color: #151515;
+    text-align: center;
+    font-family: DTF Bold;
+    font-size: 4.2rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 100%; /* 8rem */
+    letter-spacing: -0.1rem;
+}
 
+@mixin SecondaryTextRegular {
+    color: #151515;
+    font-family: Plus Jakarta Sans;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 1.5rem */
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+}
+
+.Wraper {
+    margin-top: 13rem;
+    z-index: 100;
     height: 100%;
     padding: 0rem 2rem;
 
@@ -9,160 +31,665 @@
     flex-direction: column;
     align-items: center;
     gap: 5rem;
+    margin-bottom: 10rem;
 
-    .ScreenContainer {
-        max-width: 150rem;
-        width: 100%;
-        gap: 2rem;
+    .Hero {
         display: flex;
-        .ContainerOne {
+        align-items: center;
+        flex-direction: column;
+        padding: 4rem 0rem;
+        gap: 5rem;
+
+        .Header {
             display: flex;
-            border-radius: 2rem;
-            background: #e5e5e4;
-            align-items: center;
-            justify-content: space-between;
             width: 100%;
-            max-width: 80rem;
-            // min-width: 25rem;
-            gap: 0rem;
-            overflow: hidden;
-            object-fit: contain;
             flex-direction: column;
-            padding: 10rem 0rem 2rem 0rem;
+            align-items: center;
+        }
 
-            .SwagsPic {
-                object-fit: contain;
-                width: 100%;
-            }
-
-            .CardLabel {
-                display: flex;
+        .Features {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+            .Feature {
+                text-decoration: none;
+                display: inline-flex;
+                font-family: Plus Jakarta Sans;
+                letter-spacing: 0.05rem;
+                text-transform: uppercase;
+                font-size: 1.4rem;
+                padding: 2.5rem 3.5rem;
                 align-items: center;
+                color: #151515;
                 justify-content: center;
-                flex-direction: column;
-                gap: 2.5rem;
-                padding: 2rem 4rem;
-                .CardSubHeading {
-                    color: #000;
-                    font-family: Plus Jakarta Sans;
-                    font-size: 1.3rem;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 100%; /* 1.5rem */
-                    letter-spacing: 0.15rem;
-                    text-transform: uppercase;
+                border-radius: 6.8rem;
+                font-weight: 700;
+                border: 0.19rem solid #dedede;
+                transition: 0.2s ease-in-out;
+                // gap: 1rem;
+                .FeatureIcon {
+                    height: 1.4rem;
                 }
-                .CardTitle {
-                    color: #000;
-                    text-align: center;
-                    font-family: Nyght Serif;
-                    font-size: 5rem;
-                    font-style: italic;
-                    font-weight: 500;
-                    line-height: 100%; /* 8rem */
-                    letter-spacing: -0.1rem;
+
+                &:nth-child(1){
+                    gap: 1rem;
+                }
+
+                &:hover{
+                    background-color: #f1f1f1;
                 }
             }
         }
+        .PageSubHeading {
+            font-family: Plus Jakarta Sans;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            color: #151515;
+            font-size: 1.5rem;
+        }
+        .PageTitle {
+            font-family: DTF Bold;
+            font-size: 25rem;
+            font-style: italic;
+            line-height: 90%;
+            color: #151515;
+            text-align: center;
+            font-weight: 500;
+        }
+    }
 
-        .ContainerTwo {
-            display: flex;
-            border-radius: 2rem;
-            background: #f1f1f1;
-            align-items: center;
-            justify-content: space-between;
+    .Cards {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 150rem;
+        gap: 2rem;
+
+        .ScreenContainer {
             width: 100%;
-            gap: 5rem;
-            overflow: hidden;
-            object-fit: contain;
-            flex-direction: column;
-            // padding: 6rem 4rem;
-            padding: 4rem 2rem 2rem 2rem;
-
-            max-width: 50rem;
-
-            .SwagPic{
-                height: 30rem;
-            }
-
-            .CardLabel {
+            gap: 2rem;
+            display: flex;
+            flex-direction: row-reverse;
+            .ContainerOne {
+                text-decoration: none;
                 display: flex;
+                border-radius: 2rem;
+                background: #e5e5e4;
                 align-items: center;
                 justify-content: center;
-                flex-direction: column;
-                gap: 2rem;
-                padding: 2rem 4rem;
                 width: 100%;
-                .CardSubHeading {
-                    color: #000;
-                    font-family: Plus Jakarta Sans;
-                    font-size: 1.3rem;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 100%; /* 1.5rem */
-                    letter-spacing: 0.15rem;
+                max-width: 80rem;
+                // min-width: 25rem;
+                gap: 4rem;
+                overflow: hidden;
+                object-fit: contain;
+                flex-direction: column;
+                padding: 6rem 0rem 2rem 0rem;
+
+                .SwagsPic {
+                    object-fit: contain;
+                    width: 100%;
                 }
-                .CardTitle {
-                    color: #000;
-                    text-align: center;
-                    font-family: Nyght Serif;
-                    font-size: 5rem;
-                    font-style: italic;
-                    font-weight: 500;
-                    line-height: 100%; /* 8rem */
-                    letter-spacing: -0.1rem;
+
+                .CardLabel {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 2.5rem;
+                    width: 100%;
+                    padding: 0rem 2rem;
+                    .CardSubHeading {
+                        @include SecondaryTextRegular;
+                    }
+                    .CardTitle {
+                        @include TextM;
+                    }
+                    .SubmitButton {
+                        display: flex;
+                        text-decoration: none;
+                        width: 100%;
+                        padding: 2.5rem 3rem;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 2rem;
+
+                        color: #fff;
+                        text-align: center;
+
+                        border-radius: 1.5rem;
+                        cursor: pointer;
+                        background: #151515;
+
+                        font-family: DTF Regular;
+                        font-size: 2.5rem;
+                        font-style: italic;
+                        font-weight: 400;
+                        outline: none;
+                        border: none;
+                        line-height: 100%; /* 3.6rem */
+                    }
                 }
             }
 
-            .InputBox {
+            .SonyContainer {
+                text-decoration: none;
                 display: flex;
+                border-radius: 2rem;
+                background: #e5d9ce;
+                align-items: center;
+                justify-content: center;
                 width: 100%;
-                gap: 0.3rem;
+                max-width: 80rem;
+                // min-width: 25rem;
+                gap: 4rem;
+                overflow: hidden;
+                object-fit: contain;
                 flex-direction: column;
-                .InputBar {
-                    padding: 2.5rem 3rem;
+                padding: 6rem 0rem 2rem 0rem;
+
+                .SwagsPic {
+                    object-fit: contain;
                     width: 100%;
+                    height: 30rem;
+                }
+
+                .CardLabel {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 2.5rem;
+                    width: 100%;
+                    padding: 0rem 2rem;
+                    .CardSubHeading {
+                        @include SecondaryTextRegular;
+                    }
+                    .CardTitle {
+                        @include TextM;
+                    }
+                    .SubmitButton {
+                        display: flex;
+                        text-decoration: none;
+                        width: 100%;
+                        padding: 2.5rem 3rem;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 2rem;
+
+                        color: #fff;
+                        text-align: center;
+
+                        border-radius: 1.5rem;
+                        cursor: pointer;
+                        background: #151515;
+
+                        font-family: DTF Regular;
+                        font-size: 2.5rem;
+                        font-style: italic;
+                        font-weight: 400;
+                        outline: none;
+                        border: none;
+                        line-height: 100%; /* 3.6rem */
+                    }
+                }
+            }
+
+            .ContainerTwo {
+                display: flex;
+                border-radius: 2rem;
+                background: #f1f1f1;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                gap: 5rem;
+                overflow: hidden;
+                object-fit: contain;
+                flex-direction: column;
+                // padding: 6rem 4rem;
+                padding: 4rem 2rem 2rem 2rem;
+
+                max-width: 50rem;
+
+                .SwagPic {
+                    height: 30rem;
+                }
+
+                .CardLabel {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 2rem;
+                    padding: 2rem 4rem;
+                    width: 100%;
+                    .CardSubHeading {
+                        @include SecondaryTextRegular;
+                    }
+                    .CardTitle {
+                        @include TextM;
+                    }
+                }
+
+                .InputBox {
+                    display: flex;
+                    width: 100%;
+                    gap: 0.3rem;
+                    flex-direction: column;
+                    .InputBar {
+                        padding: 2.5rem 3rem;
+                        width: 100%;
+                        border-radius: 1.5rem;
+                        font-family: DTF Regular;
+                        font-size: 2.5rem;
+                        letter-spacing: 0rem;
+
+                        border: 0.3rem solid #cfcfcf;
+
+                        outline: none;
+                        transition: 0.2s ease-in-out;
+                        &:hover {
+                            border: 0.3rem solid #616161;
+                        }
+
+                        &:focus {
+                            border: 0.3rem solid #151515;
+                        }
+                    }
+                }
+
+                .SubmitButton {
+                    display: flex;
+                    width: 100%;
+                    padding: 2.5rem 3rem;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2rem;
+
+                    color: #fff;
+                    text-align: center;
+
                     border-radius: 1.5rem;
+                    cursor: pointer;
+                    background: #151515;
+
                     font-family: DTF Regular;
                     font-size: 2.5rem;
-                    letter-spacing: 0rem;
-
-                    border: 0.3rem solid #cfcfcf;
-
+                    font-style: italic;
+                    font-weight: 400;
                     outline: none;
-                    transition: 0.2s ease-in-out;
-                    &:hover {
-                        border: 0.3rem solid #616161;
-                    }
-
-                    &:focus {
-                        border: 0.3rem solid #151515;
-                    }
+                    border: none;
+                    line-height: 100%; /* 3.6rem */
                 }
             }
 
-            .SubmitButton {
+            .SwagTshirt {
                 display: flex;
-                width: 100%;
-                padding: 2.5rem 3rem;
-                justify-content: center;
+                border-radius: 2rem;
+                background: #f1f1f1;
                 align-items: center;
+                justify-content: center;
+                width: 100%;
                 gap: 2rem;
+                overflow: hidden;
+                object-fit: contain;
+                flex-direction: column;
+                // padding: 6rem 4rem;
+                padding: 4rem 2rem 2rem 2rem;
 
-                color: #fff;
+                // max-width: 50rem;
+
+                .SwagPic {
+                    height: 30rem;
+                }
+
+                .CardLabel {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 2rem;
+                    padding: 2rem 4rem;
+                    width: 100%;
+                    .CardSubHeading {
+                        @include SecondaryTextRegular;
+                    }
+                    .CardTitle {
+                        @include TextM;
+                    }
+                }
+
+                .InputBox {
+                    display: flex;
+                    width: 100%;
+                    gap: 0.3rem;
+                    flex-direction: column;
+                    .InputBar {
+                        padding: 2.5rem 3rem;
+                        width: 100%;
+                        border-radius: 1.5rem;
+                        font-family: DTF Regular;
+                        font-size: 2.5rem;
+                        letter-spacing: 0rem;
+
+                        border: 0.3rem solid #cfcfcf;
+
+                        outline: none;
+                        transition: 0.2s ease-in-out;
+                        &:hover {
+                            border: 0.3rem solid #616161;
+                        }
+
+                        &:focus {
+                            border: 0.3rem solid #151515;
+                        }
+                    }
+                }
+
+                .SubmitButton {
+                    display: flex;
+                    width: 100%;
+                    padding: 2.5rem 3rem;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2rem;
+
+                    color: #fff;
+                    text-align: center;
+
+                    border-radius: 1.5rem;
+                    cursor: pointer;
+                    background: #151515;
+
+                    font-family: DTF Regular;
+                    font-size: 2.5rem;
+                    font-style: italic;
+                    font-weight: 400;
+                    outline: none;
+                    border: none;
+                    line-height: 100%; /* 3.6rem */
+                }
+            }
+
+            .BadgeContainer {
+                display: flex;
+                border-radius: 2rem;
+                background: #cdc7fe;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                gap: 5rem;
+                overflow: hidden;
+                object-fit: contain;
+                flex-direction: column;
+                // padding: 6rem 4rem;
+                padding: 4rem 2rem 2rem 2rem;
+
+                max-width: 50rem;
+
+                .SwagPic {
+                    height: 25rem;
+                }
+
+                .UserBadgePreview {
+                    display: none;
+                }
+
+                .UserBadge {
+                    // width: 100%;
+                    height: 25rem;
+                    object-fit: contain;
+                    border-radius: 1rem;
+                }
+
+                .CardLabel {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 2rem;
+                    width: 100%;
+                    .CardSubHeading {
+                        @include SecondaryTextRegular;
+                    }
+                    .CardTitle {
+                        @include TextM;
+                    }
+                }
+
+                .InputBox {
+                    display: flex;
+                    width: 100%;
+                    gap: 0.3rem;
+                    flex-direction: column;
+                    .InputBar {
+                        padding: 2.5rem 3rem;
+                        width: 100%;
+                        border-radius: 1.5rem;
+                        font-family: DTF Regular;
+                        font-size: 2.5rem;
+                        letter-spacing: 0rem;
+
+                        border: 0.3rem solid #cfcfcf;
+
+                        outline: none;
+                        transition: 0.2s ease-in-out;
+                        &:hover {
+                            border: 0.3rem solid #616161;
+                        }
+
+                        &:focus {
+                            border: 0.3rem solid #151515;
+                        }
+                    }
+                }
+
+                .UploadButton {
+                    // position: relative;
+                    width: 100%;
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 0.5rem;
+                    text-transform: lowercase;
+                    .SubmitButton {
+                        position: relative;
+                        display: flex;
+                        width: 100%;
+                        padding: 2.5rem 3rem;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 2rem;
+
+                        color: #fff;
+                        text-align: center;
+
+                        border-radius: 1.5rem;
+                        cursor: pointer;
+                        background: #151515;
+
+                        font-family: DTF Regular;
+                        font-size: 2.5rem;
+                        font-style: italic;
+                        font-weight: 400;
+                        outline: none;
+                        border: none;
+                        line-height: 100%; /* 3.6rem */
+
+                        .UploadButton {
+                            position: absolute;
+                            display: flex;
+                            width: 100%;
+                            padding: 2.5rem 3rem;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 2rem;
+                            opacity: 0;
+
+                            color: #fff;
+                            text-align: center;
+
+                            border-radius: 1.5rem;
+                            cursor: pointer;
+                            background: #151515;
+
+                            font-family: DTF Regular;
+                            font-size: 2.5rem;
+                            font-style: italic;
+                            font-weight: 400;
+                            outline: none;
+                            border: none;
+                            line-height: 100%; /* 3.6rem */
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.PaymentOverlay {
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000067;
+    backdrop-filter: blur(10px);
+    display: none;
+    .Container {
+        background-color: #fff;
+        padding: 4rem 2rem;
+        background-image: url(https://ik.imagekit.io/designthefuture/Essentials/PaymentBackground.png?updatedAt=1699635360993);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3rem;
+        width: 100%;
+        max-width: 50rem;
+
+        .OverlayLabel {
+            font-family: DTF Bold;
+            text-align: center;
+            font-size: 6em;
+            font-style: italic;
+            font-weight: 500;
+            color: #151515;
+            line-height: 90%;
+            letter-spacing: -0.2rem;
+        }
+        .UPI {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            .UPILabel {
+                color: #151515;
+                text-align: center;
+                font-family: Plus Jakarta Sans;
+                font-size: 1.2rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%;
+                letter-spacing: 0.2rem;
+            }
+
+            .UPIQR {
+                height: 20rem;
+            }
+        }
+
+        .BottomButtons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;
+
+            .Buttons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 0.5rem;
+                width: 100%;
+                .WhatsappButton {
+                    outline: none;
+                    border-radius: 1.5rem;
+                    background: #1eda53;
+                    border: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    .LinkToWhatsapp {
+                        font-family: DTF Regular;
+                        font-size: 2.5rem;
+                        font-style: italic;
+                        font-weight: 400;
+                        line-height: 100%; /* 3.6rem */
+                        text-decoration: none;
+                        color: #fff;
+                        padding: 2.5rem 3rem;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+
+                        align-items: center;
+                        justify-content: center;
+                        gap: 0.5rem;
+
+                        .WhatsappLogo {
+                            height: 2.4rem;
+                        }
+                    }
+                }
+
+                .PaidButton {
+                    font-family: DTF Regular;
+                    font-size: 2.5rem;
+                    font-style: italic;
+                    font-weight: 400;
+                    line-height: 100%; /* 3.6rem */
+                    text-decoration: none;
+                    color: #fff;
+                    padding: 2.5rem 3rem;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    cursor: pointer;
+                    outline: none;
+                    border: none;
+
+                    border-radius: 1.5rem;
+                    background: #151515;
+
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5rem;
+                }
+            }
+
+            .Note {
+                color: #727272;
                 text-align: center;
 
-                border-radius: 1.5rem;
-                cursor: pointer;
-                background: #151515;
-
-                font-family: DTF Regular;
-                font-size: 2.5rem;
-                font-style: italic;
-                font-weight: 400;
-                outline: none;
-                border: none;
-                line-height: 100%; /* 3.6rem */
+                font-family: Plus Jakarta Sans;
+                font-size: 1.1rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%; /* 1.92rem */
+                letter-spacing: 0.02rem;
+                text-transform: uppercase;
             }
         }
     }
