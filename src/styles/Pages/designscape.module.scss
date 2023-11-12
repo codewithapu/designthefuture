@@ -71,11 +71,11 @@
                     height: 1.4rem;
                 }
 
-                &:nth-child(1){
+                &:nth-child(1) {
                     gap: 1rem;
                 }
 
-                &:hover{
+                &:hover {
                     background-color: #f1f1f1;
                 }
             }
@@ -414,11 +414,11 @@
             .BadgeContainer {
                 display: flex;
                 border-radius: 2rem;
-                background: #cdc7fe;
+                background: #E9E6FF;
                 align-items: center;
                 justify-content: space-between;
                 width: 100%;
-                gap: 5rem;
+                gap: 4rem;
                 overflow: hidden;
                 object-fit: contain;
                 flex-direction: column;
@@ -454,33 +454,6 @@
                     }
                     .CardTitle {
                         @include TextM;
-                    }
-                }
-
-                .InputBox {
-                    display: flex;
-                    width: 100%;
-                    gap: 0.3rem;
-                    flex-direction: column;
-                    .InputBar {
-                        padding: 2.5rem 3rem;
-                        width: 100%;
-                        border-radius: 1.5rem;
-                        font-family: DTF Regular;
-                        font-size: 2.5rem;
-                        letter-spacing: 0rem;
-
-                        border: 0.3rem solid #cfcfcf;
-
-                        outline: none;
-                        transition: 0.2s ease-in-out;
-                        &:hover {
-                            border: 0.3rem solid #616161;
-                        }
-
-                        &:focus {
-                            border: 0.3rem solid #151515;
-                        }
                     }
                 }
 

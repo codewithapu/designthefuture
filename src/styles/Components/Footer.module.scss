@@ -1,0 +1,108 @@
+$SlateDark: #141115;
+
+.FooterBox {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #151515;
+
+    .Footer {
+        display: flex;
+        padding: 4rem 2rem;
+        width: 100%;
+        flex-direction: column;
+        max-width: 150rem;
+        .Bottom {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            // border-top: 0.02rem solid #3b3b3b;
+            background-color: #1E1E1E;
+            padding: 2rem 0rem 0rem 2rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            .Copyright {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+                .CopyrightText {
+                    color: #8e8d8d;
+                    font-family: Plus Jakarta Sans;
+                    font-size: 1.45rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    // text-transform: uppercase;
+                    line-height: 100%; /* 1.7rem */
+                    letter-spacing: -0.02rem;
+                }
+
+                .DTFLogo {
+                    height: 3rem;
+                }
+            }
+
+            .InstagramLink {
+                .Logo {
+                    height: 3.4rem;
+                }
+            }
+        }
+        .FooterContent {
+            display: flex;
+            flex-direction: row;
+            gap: 5rem;
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .FollowGraphics{
+                height: 20rem;
+            }
+            
+            .AllLinks{
+                display: flex;
+                // width: 100%;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 10rem;
+                .LinkContainer {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    padding: 2rem 0rem 4rem 0rem;
+                    .LinkListLabel {
+                        color: #979797;
+                        font-family: Plus Jakarta Sans;
+                        font-size: 1.2rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 100%;
+                        letter-spacing: 0.03rem;
+                    }
+                    .LinksList {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2.5rem;
+                        .LinkInline {
+                            color: #fff;
+                            text-decoration: none;
+                            font-family: Plus Jakarta Sans;
+                            font-size: 1.8rem;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 100%; /* 2rem */
+                            letter-spacing: -0.02rem;
+                            // text-transform: uppercase;
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+    }
+}

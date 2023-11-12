@@ -1,7 +1,7 @@
 import '../styles/Globals.scss'
 import { SessionProvider } from 'next-auth/react';
 import NavBar from './components/NavBar';
-
+import Footer from './components/Footer';
 
 
 function DTF({ Component, pageProps, router }) {

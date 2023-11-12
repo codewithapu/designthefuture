@@ -41,7 +41,7 @@ const Profile: React.FC = () => {
         <div>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-                <title>Edu Burner | Account</title>
+                <title>Design The Future | Account</title>
                 <meta name="robots" content="noindex"/>
                 <meta name="googlebot" content="noindex"/>
             </Head>

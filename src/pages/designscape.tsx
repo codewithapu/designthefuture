@@ -248,31 +248,29 @@ export default function DesignScape() {
                                     <br />
                                     exclusive badge
                                 </h1>
+                            </div>
+                            <img ref={previewRef} draggable="false" className={styles.UserBadge} />
 
-                                <img ref={previewRef} draggable="false" className={styles.UserBadge} />
+                            <div className={styles.UploadButton}>
+                                <button className={styles.SubmitButton}>
+                                    upload pic
+                                    <input
+                                        className={styles.UploadButton}
+                                        type="file"
+                                        accept="image/*"
+                                        onChange={handleImageUpload}
+                                    />
+                                </button>
 
-                                <div className={styles.UploadButton}>
-                                    <button className={styles.SubmitButton}>
-                                        upload pic
-                                        <input
-                                            className={styles.UploadButton}
-                                            type="file"
-                                            accept="image/*"
-                                            onChange={handleImageUpload}
-                                        />
+                                {badgeGenerated ? (
+                                    <button className={styles.SubmitButton} onClick={downloadBadge}>
+                                        download
                                     </button>
-
-                                    {badgeGenerated ? (
-                                        <button className={styles.SubmitButton} onClick={downloadBadge}>
-                                            download
-                                        </button>
-                                    ) : (
-                                        <button className={styles.SubmitButton} onClick={generateBadge}>
-                                            generate
-                                        </button>
-                                    )}
-                                </div>
-
+                                ) : (
+                                    <button className={styles.SubmitButton} onClick={generateBadge}>
+                                        generate
+                                    </button>
+                                )}
                             </div>
                         </div>
 

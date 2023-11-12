@@ -3,6 +3,8 @@ import Head from 'next/head'
 import styles from '../styles/Home/Home.module.scss'
 import React, { useState } from "react";
 import { auth } from '../supabase';
+import Footer from './components/Footer';
+
 export default function Home() {
 
   return (
@@ -110,6 +112,8 @@ export default function Home() {
         </div>
       </div>
 
+
+      <Footer/>
     </>
   )
 }
