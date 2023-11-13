@@ -19,8 +19,8 @@ function DTF({ Component, pageProps, router }) {
         <Component {...pageProps} key={router.route} />
 
       </SessionProvider>
+      <Footer />
     </>
-
   );
 }
 

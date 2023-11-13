@@ -49,26 +49,40 @@ $SlateDark: #141115;
             padding: 0rem 8rem;
             width: 100%;
             max-width: 150rem;
+
+
+            @media only screen and (max-width: 1135px) {
+                padding: 3rem 4rem;
+            }
             .Title {
                 display: flex;
                 flex-direction: column;
                 gap: 4rem;
                 letter-spacing: 0rem;
-                .HeroDescription {
-                    font-family: DTF Bold;
+                padding: 4rem 0rem;
 
-                    color: #151515;
+                @media only screen and (max-width: 1135px){
+                    gap: 2.5rem;
+                }
+
+                .HeroDescription {
+                    font-family: DTF Regular;
+
+                    color: #969696;
 
                     font-size: 2.5rem;
-                    font-style: italic;
+
                     font-weight: 500;
-                    line-height: 87.6%; /* 3.066rem */
+                    line-height: 120%; 
+                    @media only screen and (max-width: 900px){
+                        font-size: 5rem;
+                    }
                 }
                 .HeroTitle {
                     font-family: DTF Regular;
                     color: #151515;
                     font-size: 8rem;
-                    font-style: italic;
+
                     font-weight: 500;
                     line-height: 60%;
 
@@ -77,6 +91,14 @@ $SlateDark: #141115;
                     align-items: flex-start;
                     flex-direction: row;
                     letter-spacing: -0.1rem;
+
+                    @media only screen and (max-width: 1135px){
+                        letter-spacing: 0rem;
+                    }
+
+                    @media only screen and (max-width: 900px){
+                        display: none;
+                    }
                 }
 
                 .MoreDetails{
@@ -84,6 +106,7 @@ $SlateDark: #141115;
                     flex-direction: row;
                     align-items: center;
                     gap: 0.5rem;
+                    flex-wrap: wrap;
                     .Details {
                         text-decoration: none;
                         background-color: #fff;
@@ -91,10 +114,21 @@ $SlateDark: #141115;
                         border-radius: 5rem;
                         transition: 0.2s ease-in-out;
                         border: 0.2rem  solid transparent;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        @media only screen and (max-width: 800px){
+                            padding: 1.5rem 2rem;
+                        }
                         .Date {
                             .Logo {
                                 height: 1.4rem;
                                 width: 1.4rem;
+
+                                @media only screen and (max-width: 800px){
+                                    height: 1.1rem;
+                                    width: 1.1rem;
+                                }
                             }
                             display: flex;
                             align-items: center;
@@ -105,8 +139,19 @@ $SlateDark: #141115;
                             font-size: 1.2rem;
                             font-style: normal;
                             font-weight: 700;
-                            line-height: 50%; /* 1.4892rem */
-                            letter-spacing: 0.05rem;
+                            line-height: 50%; 
+                            letter-spacing: 0.03rem;
+                            .FeatureLabel{
+                                @media only screen and (max-width: 1135px) {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    flex-shrink: 0;
+                                }
+
+                                @media only screen and (max-width: 800px){
+                                    font-size: 1.1rem;
+                                }
+                            }
                         }
 
                         &:hover{
@@ -138,12 +183,24 @@ $SlateDark: #141115;
                     padding: 2rem;
                     align-items: center;
                     justify-content: center;
+                    transition: 0.2s ease-in-out;
+                    &:hover{
+                        background: #1b1b1b;
+                    }
+
+                    @media only screen and (max-width: 1135px){
+                        width: 100%;
+                        max-width: 100%;
+                    }
                 }
             }
 
             .HeroBanner {
                 height: 45rem;
                 // object-fit: cover;
+                @media only screen and (max-width: 900px){
+                    display: none;
+                }
             }
         }
 
@@ -217,7 +274,7 @@ $SlateDark: #141115;
                     color: #000;
                     font-family: DTF Bold;
                     font-size: 2.5rem;
-                    font-style: italic;
+
                     font-weight: 500;
                     line-height: 100%; /* 4.8rem */
                     letter-spacing: -0.096rem;

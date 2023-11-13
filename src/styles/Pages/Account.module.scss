@@ -1,77 +1,192 @@
-.Wraper {
-    margin-top: 20rem;
+.AccounPage {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    color: #fff;
-    gap: 20px;
-    .UserBadge {
-        .ProfilePIC {
-            border-radius: 300px;
-        }
-        .Badge {
-            position: absolute;
-            transform: translateY(60px);
-            svg {
-                height: 40px;
-                width: auto;
-            }
-        }
-    }
+    gap: 2rem;
+    margin-top: 6rem;
+    padding: 4rem 2rem 6rem 2rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 
-    .UserDetails {
+    .WrapContainer {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        max-width: 70rem;
+        width: 100%;
+        gap: 2rem;
         flex-direction: column;
-        gap: 10px;
-        .BadgeLabel {
-            text-transform: uppercase;
-            color: #787878;
-            font-family: Plus Jakarta Sans;
-            font-size: 0.9rem;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 100%; /* 0.9rem */
-            letter-spacing: 0.09rem;
-        }
-        .UserName {
-            color: rgba(255, 255, 255, 0.8);
-            font-family: Urbanist;
-            font-size: 2.1412rem;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 100%; /* 2.1412rem */
-            letter-spacing: -0.0428rem;
-            text-transform: lowercase;
-            display: flex;
-            align-items: center;
-            gap: 3px;
-            .Verified {
-                height: 13px;
-                width: 13px;
+        .PageTitle {
+            font-family: DTF Regular;
+            font-size: 4.5rem;
+            .PageDescription {
+                font-family: Inter;
+                font-size: 1.7rem;
+                letter-spacing: -0.02rem;
+                font-weight: 400;
+                color: #414141;
             }
         }
-    }
+        .MainContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .Wraper {
+                // margin-top: 20rem;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                color: #fff;
+                background-color: #f1f1f1;
+                padding: 2rem 2rem;
+                width: 100%;
+                max-width: 35rem;
+                gap: 20px;
+                border-radius: 2rem;
+                .UserBadge {
+                    .ProfilePIC {
+                        border-radius: 300px;
+                    }
+                    .Badge {
+                        position: absolute;
+                        transform: translateY(60px);
+                        svg {
+                            height: 40px;
+                            width: auto;
+                        }
+                    }
+                }
 
-    .LogoutBTN {
-        color: #fff;
-        font-family: Plus Jakarta Sans;
-        font-size: 1.2rem;
-        font-style: normal;
-        font-weight: 800;
-        line-height: 100.5%; /* 1.407rem */
-        letter-spacing: 0.07rem;
-        text-transform: uppercase;
-        padding: 1.6rem 10rem;
+                .UserDetails {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 10px;
+                    .BadgeLabel {
+                        color: #757575;
+                        font-family: Inter;
+                        font-size: 1.4rem;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 100%; /* 1.4892rem */
+                        letter-spacing: -0.02rem;
+                        .UserID{
+                            font-weight: 600;
+                            color: #151515;
+                        }
+                    }
+                    .UserName {
+                        color: #757575;
+                        font-family: Inter;
+                        font-size: 2.2rem;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 100%; /* 2.1412rem */
+                        letter-spacing: -0.1rem;
+                        // text-transform: lowercase;
+                        display: flex;
+                        align-items: center;
+                        gap: 3px;
+                        .Verified {
+                            height: 13px;
+                            width: 13px;
+                        }
+                    }
+                }
 
-        border: none;
-        background-color: #ff1d1d;
-        &:hover {
-            // background: $SlateCarbon;
-            background-color: #ff0000;
-            cursor: pointer;
+
+            }
+
+            .AccountData {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                .InputBox {
+                    padding: 2.5rem 3rem;
+                    width: 100%;
+                    border-radius: 1.5rem;
+                    font-family: DTF Regular;
+                    font-size: 2.5rem;
+                    letter-spacing: 0rem;
+
+                    border: 0.3rem solid #cfcfcf;
+
+                    outline: none;
+                    transition: 0.2s ease-in-out;
+                    &:hover {
+                        border: 0.3rem solid #616161;
+                    }
+
+                    &:focus {
+                        border: 0.3rem solid #151515;
+                    }
+                }
+
+                .SubmitButton {
+                    display: flex;
+                    width: 100%;
+                    padding: 2.5rem 3rem;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2rem;
+
+                    color: #fff;
+                    text-align: center;
+
+                    border-radius: 1.5rem;
+                    cursor: pointer;
+                    background: #151515;
+
+                    font-family: DTF Regular;
+                    font-size: 2.5rem;
+                    font-style: italic;
+                    font-weight: 400;
+                    outline: none;
+                    border: none;
+                    line-height: 100%; /* 3.6rem */
+                }
+
+
+
+            }
+
+            
+            .LogoutBTN {
+                display: flex;
+                padding: 2.5rem 3rem;
+
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                width: 100%;
+                // display: none;
+
+                color: #151515;
+                text-align: center;
+
+                border-radius: 1.5rem;
+                cursor: pointer;
+                // background: #151515;
+
+                font-family: DTF Regular;
+                font-size: 2.5rem;
+                font-style: italic;
+                font-weight: 400;
+                outline: none;
+                border: none;
+                line-height: 100%; /* 3.6rem */
+                transition: 0.2s ease-in-out;
+                border: 2px solid #151515;
+                background: #ffbaba;
+                color: #f00;
+                border: 2px solid #f00;
+                &:hover {
+
+                    background: #fff;
+
+                    cursor: pointer;
+                }
+            }
         }
     }
 }

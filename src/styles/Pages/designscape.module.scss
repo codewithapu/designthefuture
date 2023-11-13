@@ -3,7 +3,7 @@
     text-align: center;
     font-family: DTF Bold;
     font-size: 4.2rem;
-    font-style: italic;
+
     font-weight: 500;
     line-height: 100%; /* 8rem */
     letter-spacing: -0.1rem;
@@ -38,7 +38,7 @@
         align-items: center;
         flex-direction: column;
         padding: 4rem 0rem;
-        gap: 5rem;
+        gap: 3rem;
 
         .Header {
             display: flex;
@@ -51,6 +51,10 @@
             display: flex;
             flex-direction: row;
             gap: 0.5rem;
+
+            @media only screen and (max-width: 900px){
+                flex-direction: column;
+            }
             .Feature {
                 text-decoration: none;
                 display: inline-flex;
@@ -84,17 +88,42 @@
             font-family: Plus Jakarta Sans;
             text-transform: uppercase;
             letter-spacing: 0.2rem;
-            color: #151515;
+            color: #818181;
+            font-weight: 700;
             font-size: 1.5rem;
+
+            @media only screen and (max-width: 1320px) {
+                font-size: 1.3rem;
+            }
+
+            @media only screen and (max-width: 800px) {
+                font-size: 1.3rem;
+                letter-spacing: 0.2rem;
+            }
         }
         .PageTitle {
             font-family: DTF Bold;
             font-size: 25rem;
-            font-style: italic;
+
             line-height: 90%;
             color: #151515;
             text-align: center;
             font-weight: 500;
+
+            @media only screen and (max-width: 1320px) {
+                font-size: 20rem;
+                padding: 3rem 0rem;
+
+            }
+
+            @media only screen and (max-width: 1080px) {
+                font-size: 15rem;
+            }
+
+            @media only screen and (max-width: 830px) {
+                font-size: 13rem;
+                padding: 3rem 0rem;
+            }
         }
     }
 
@@ -110,6 +139,13 @@
             gap: 2rem;
             display: flex;
             flex-direction: row-reverse;
+
+
+            @media only screen and (max-width: 1250px){
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+                align-items: center;
+            }
             .ContainerOne {
                 text-decoration: none;
                 display: flex;
@@ -125,6 +161,10 @@
                 object-fit: contain;
                 flex-direction: column;
                 padding: 6rem 0rem 2rem 0rem;
+
+                @media only screen and (max-width: 1250px){
+                    max-width: 80rem;
+                }
 
                 .SwagsPic {
                     object-fit: contain;
@@ -163,7 +203,6 @@
 
                         font-family: DTF Regular;
                         font-size: 2.5rem;
-                        font-style: italic;
                         font-weight: 400;
                         outline: none;
                         border: none;
@@ -226,7 +265,6 @@
 
                         font-family: DTF Regular;
                         font-size: 2.5rem;
-                        font-style: italic;
                         font-weight: 400;
                         outline: none;
                         border: none;
@@ -249,7 +287,7 @@
                 // padding: 6rem 4rem;
                 padding: 4rem 2rem 2rem 2rem;
 
-                max-width: 50rem;
+                max-width: 80rem;
 
                 .SwagPic {
                     height: 30rem;
@@ -261,7 +299,7 @@
                     justify-content: center;
                     flex-direction: column;
                     gap: 2rem;
-                    padding: 2rem 4rem;
+                    padding: 2rem 2rem;
                     width: 100%;
                     .CardSubHeading {
                         @include SecondaryTextRegular;
@@ -315,7 +353,6 @@
 
                     font-family: DTF Regular;
                     font-size: 2.5rem;
-                    font-style: italic;
                     font-weight: 400;
                     outline: none;
                     border: none;
@@ -337,7 +374,7 @@
                 // padding: 6rem 4rem;
                 padding: 4rem 2rem 2rem 2rem;
 
-                // max-width: 50rem;
+                max-width: 80rem;
 
                 .SwagPic {
                     height: 30rem;
@@ -403,7 +440,7 @@
 
                     font-family: DTF Regular;
                     font-size: 2.5rem;
-                    font-style: italic;
+
                     font-weight: 400;
                     outline: none;
                     border: none;
@@ -414,7 +451,7 @@
             .BadgeContainer {
                 display: flex;
                 border-radius: 2rem;
-                background: #E9E6FF;
+                background: #e9e6ff;
                 align-items: center;
                 justify-content: space-between;
                 width: 100%;
@@ -425,7 +462,7 @@
                 // padding: 6rem 4rem;
                 padding: 4rem 2rem 2rem 2rem;
 
-                max-width: 50rem;
+                max-width: 80rem;
 
                 .SwagPic {
                     height: 25rem;
@@ -483,7 +520,7 @@
 
                         font-family: DTF Regular;
                         font-size: 2.5rem;
-                        font-style: italic;
+
                         font-weight: 400;
                         outline: none;
                         border: none;
@@ -508,7 +545,7 @@
 
                             font-family: DTF Regular;
                             font-size: 2.5rem;
-                            font-style: italic;
+
                             font-weight: 400;
                             outline: none;
                             border: none;
@@ -531,7 +568,7 @@
     padding: 1rem;
     align-items: center;
     justify-content: center;
-    background-color: #00000067;
+    background-color: #e8e8e867;
     backdrop-filter: blur(10px);
     display: none;
     .Container {
@@ -554,7 +591,6 @@
             font-family: DTF Bold;
             text-align: center;
             font-size: 6em;
-            font-style: italic;
             font-weight: 500;
             color: #151515;
             line-height: 90%;
@@ -607,7 +643,6 @@
                     .LinkToWhatsapp {
                         font-family: DTF Regular;
                         font-size: 2.5rem;
-                        font-style: italic;
                         font-weight: 400;
                         line-height: 100%; /* 3.6rem */
                         text-decoration: none;
@@ -630,7 +665,6 @@
                 .PaidButton {
                     font-family: DTF Regular;
                     font-size: 2.5rem;
-                    font-style: italic;
                     font-weight: 400;
                     line-height: 100%; /* 3.6rem */
                     text-decoration: none;
@@ -653,16 +687,17 @@
             }
 
             .Note {
-                color: #727272;
+                color: #a9a9a9;
                 text-align: center;
 
-                font-family: Plus Jakarta Sans;
-                font-size: 1.1rem;
+                font-family: Inter;
+                font-size: 1.3rem;
                 font-style: normal;
                 font-weight: 600;
                 line-height: 120%; /* 1.92rem */
-                letter-spacing: 0.02rem;
-                text-transform: uppercase;
+                letter-spacing: -0.02rem;
+                // text-transform: uppercase;
+                display: none;
             }
         }
     }

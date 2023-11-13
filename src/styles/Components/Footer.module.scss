@@ -18,7 +18,7 @@ $SlateDark: #141115;
             justify-content: space-between;
             width: 100%;
             // border-top: 0.02rem solid #3b3b3b;
-            background-color: #1E1E1E;
+            background-color: #1e1e1e;
             padding: 2rem 0rem 0rem 2rem;
             padding: 2rem;
             border-radius: 1rem;
@@ -29,6 +29,7 @@ $SlateDark: #141115;
                 .CopyrightText {
                     color: #8e8d8d;
                     font-family: Plus Jakarta Sans;
+                    font-family: Inter;
                     font-size: 1.45rem;
                     font-style: normal;
                     font-weight: 600;
@@ -58,16 +59,41 @@ $SlateDark: #141115;
             justify-content: space-between;
             align-items: center;
 
-            .FollowGraphics{
-                height: 20rem;
+            @media only screen and (max-width: 1000px) {
+                flex-direction: column;
+                align-items: flex-end
             }
-            
-            .AllLinks{
+
+            .FollowGraphics {
+                height: 20rem;
+
+                @media only screen and (max-width: 480px) {
+                    width: 100%;
+                }
+            }
+
+            .AllLinks {
                 display: flex;
                 // width: 100%;
                 flex-direction: row;
                 justify-content: flex-start;
                 gap: 10rem;
+                width: 100%;
+
+                @media only screen and (max-width: 1040px) {
+                    gap: 4rem;
+                }
+
+                @media only screen and (max-width: 615px){
+                    gap: 1rem;
+                }
+
+                @media only screen and (max-width: 615px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                }
+
                 .LinkContainer {
                     display: flex;
                     flex-direction: column;
@@ -76,11 +102,14 @@ $SlateDark: #141115;
                     .LinkListLabel {
                         color: #979797;
                         font-family: Plus Jakarta Sans;
-                        font-size: 1.2rem;
+                        font-size: 1.15rem;
                         font-style: normal;
-                        font-weight: 600;
+                        font-weight: 700;
                         line-height: 100%;
-                        letter-spacing: 0.03rem;
+                        letter-spacing: 0.05rem;
+                        @media only screen and (max-width: 915px){
+                            font-size: 1rem;
+                        }
                     }
                     .LinksList {
                         display: flex;
@@ -89,20 +118,27 @@ $SlateDark: #141115;
                         .LinkInline {
                             color: #fff;
                             text-decoration: none;
-                            font-family: Plus Jakarta Sans;
-                            font-size: 1.8rem;
+                            font-family: Inter;
+                            font-size: 1.7rem;
                             font-style: normal;
+                            display: inline-flex;
                             font-weight: 500;
                             line-height: 100%; /* 2rem */
                             letter-spacing: -0.02rem;
+                            flex-wrap: nowrap;
+                            flex-shrink: 0;
                             // text-transform: uppercase;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+
+                            @media only screen and (max-width: 915px) {
+                                font-size: 2rem;
+                            }
                         }
                     }
                 }
-
-
             }
-
         }
     }
 }

@@ -130,7 +130,7 @@ export default function DesignScape() {
 
 
                         <p className={styles.Note}>
-                            Don't forget to share your receipt on WhatsApp
+                            Don't forget to share your receipt on WhatsApp*
                         </p>
                     </div>
 
@@ -214,8 +214,8 @@ export default function DesignScape() {
                             </div>
 
                             <div className={styles.InputBox}>
-                                <input className={styles.InputBar} type="text" placeholder='enter your name' />
-                                <input className={styles.InputBar} type="tel" placeholder='enter your whatsapp number' />
+                                <input className={styles.InputBar} type="text" placeholder='your name' />
+                                <input className={styles.InputBar} type="tel" placeholder='your whatsapp number' />
                             </div>
 
 
