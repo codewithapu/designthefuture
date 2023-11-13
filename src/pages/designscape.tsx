@@ -157,7 +157,7 @@ export default function DesignScape() {
                             <svg className={styles.FeatureIcon} xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
                                 <path d="M16 0.5C7.17698 0.5 0 7.67697 0 16.5C0 25.323 7.17698 32.5 16 32.5C24.823 32.5 32 25.323 32 16.5C32 7.67697 24.823 0.5 16 0.5ZM16 2.78562C23.5877 2.78562 29.7143 8.9123 29.7143 16.5C29.7143 24.0877 23.5877 30.2142 16 30.2142C8.41227 30.2142 2.28571 24.0877 2.28571 16.5C2.28571 8.9123 8.41227 2.78562 16 2.78562ZM14.8571 6.21425V17.6429H26.2857V15.3571H17.1429V6.21425H14.8571Z" fill="black" />
                             </svg>
-                            8.30 PM TO 5 PM
+                            8.30 AM TO 5 PM
                         </Link>
 
                         <Link target='_blank' href="https://maps.app.goo.gl/37fuRxHy5qtnfLkz7" className={styles.Feature}>

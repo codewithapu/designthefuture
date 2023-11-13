@@ -38,7 +38,7 @@ export default function Footer() {
                             </p>
 
                             <div className={styles.LinksList}>
-                                <Link href="/" className={styles.LinkInline}>
+                                <Link href="/terms" className={styles.LinkInline}>
                                     Terms
                                 </Link>
                                 <Link href="/" className={styles.LinkInline}>
@@ -103,7 +103,7 @@ export default function Footer() {
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M21.929 15.9915L0 28.4067L21.8206 41.1908L21.929 15.9915ZM18.4268 21.9692L6.96519 28.4582L18.3702 35.1401L18.4268 21.9692Z" fill="white" />
                         </svg>
                         <p className={styles.CopyrightText}>
-                            © 2023 • Design The Future
+                            © 2023 • DesignTheFuture
                         </p>
                     </div>
                     <Link target='_blank' href="//instagram.com/designthefuture.in" className={styles.InstagramLink}>

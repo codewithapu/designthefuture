@@ -90,8 +90,8 @@ const Profile: React.FC = () => {
                         </section>
 
                         <form className={styles.AccountData}>
-                            <input type='text' className={styles.InputBox} placeholder='enter your new name' />
-                            <input type='text' className={styles.InputBox} placeholder='enter your new username' />
+                            <input type='text' className={styles.InputBox} placeholder='your new name' />
+                            <input type='text' className={styles.InputBox} placeholder='your new username' />
                             <button type="submit" className={styles.SubmitButton}>update profile</button>
                         </form>
                         <button className={styles.LogoutBTN} onClick={handleSignout}>sign out</button>
