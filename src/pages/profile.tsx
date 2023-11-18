@@ -77,11 +77,10 @@ const Profile: React.FC = () => {
 
                             <div className={styles.UserDetails}>
                                 <h3 className={styles.BadgeLabel}>
-                                    <span className={styles.UserID}>
+                                    {/* <span className={styles.UserID}>
                                         mahatosupriya
-                                    </span>
+                                    </span> */}
                                 </h3>
-                                {/* <Link href="/creator">Create Creator Account</Link> */}
                                 <h1 className={styles.UserName}>
                                     {session?.user?.name}
                                 </h1>
@@ -90,9 +89,9 @@ const Profile: React.FC = () => {
                         </section>
 
                         <form className={styles.AccountData}>
-                            <input type='text' className={styles.InputBox} placeholder='your new name' />
+                            {/* <input type='text' className={styles.InputBox} placeholder='your new name' />
                             <input type='text' className={styles.InputBox} placeholder='your new username' />
-                            <button type="submit" className={styles.SubmitButton}>update profile</button>
+                            <button type="submit" className={styles.SubmitButton}>update profile</button> */}
                         </form>
                         <button className={styles.LogoutBTN} onClick={handleSignout}>sign out</button>
 

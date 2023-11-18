@@ -1,0 +1,144 @@
+.PaymentOverlay {
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8e8e867;
+    backdrop-filter: blur(10px);
+    // display: none;
+    .Container {
+        background-color: #fff;
+        padding: 4rem 2rem;
+        background-image: url(https://ik.imagekit.io/designthefuture/Essentials/PaymentBackground.png?updatedAt=1699635360993);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3rem;
+        width: 100%;
+        max-width: 50rem;
+
+        .OverlayLabel {
+            font-family: DTF Bold;
+            text-align: center;
+            font-size: 6em;
+            font-weight: 500;
+            color: #151515;
+            line-height: 90%;
+            letter-spacing: -0.2rem;
+        }
+        .UPI {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            .UPILabel {
+                color: #151515;
+                text-align: center;
+                font-family: Plus Jakarta Sans;
+                font-size: 1.2rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%;
+                letter-spacing: 0.2rem;
+            }
+
+            .UPIQR {
+                height: 20rem;
+            }
+        }
+
+        .BottomButtons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;
+
+            .Buttons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 0.5rem;
+                width: 100%;
+                .WhatsappButton {
+                    outline: none;
+                    border-radius: 1.5rem;
+                    background: #1eda53;
+                    border: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    .LinkToWhatsapp {
+                        font-family: DTF Regular;
+                        font-size: 2.5rem;
+                        font-weight: 400;
+                        line-height: 100%; /* 3.6rem */
+                        text-decoration: none;
+                        color: #fff;
+                        padding: 2.5rem 3rem;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+
+                        align-items: center;
+                        justify-content: center;
+                        gap: 0.5rem;
+
+                        .WhatsappLogo {
+                            height: 2.4rem;
+                        }
+                    }
+                }
+
+                .PaidButton {
+                    font-family: DTF Regular;
+                    font-size: 2.5rem;
+                    font-weight: 400;
+                    line-height: 100%; /* 3.6rem */
+                    text-decoration: none;
+                    color: #fff;
+                    padding: 2.5rem 3rem;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    cursor: pointer;
+                    outline: none;
+                    border: none;
+
+                    border-radius: 1.5rem;
+                    background: #151515;
+
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5rem;
+                }
+            }
+
+            .Note {
+                color: #a9a9a9;
+                text-align: center;
+
+                font-family: Inter;
+                font-size: 1.3rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%; /* 1.92rem */
+                letter-spacing: -0.02rem;
+                // text-transform: uppercase;
+                display: none;
+            }
+        }
+    }
+}

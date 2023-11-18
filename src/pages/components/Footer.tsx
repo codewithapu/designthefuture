@@ -38,11 +38,11 @@ export default function Footer() {
                             </p>
 
                             <div className={styles.LinksList}>
-                                <Link href="/terms" className={styles.LinkInline}>
+                                <Link href="/policy/terms" className={styles.LinkInline}>
                                     Terms
                                 </Link>
-                                <Link href="/" className={styles.LinkInline}>
-                                    Support
+                                <Link href="/policy/privacy" className={styles.LinkInline}>
+                                    Privacy
                                 </Link>
                                 <Link href="/" className={styles.LinkInline}>
                                     Careers
@@ -106,7 +106,7 @@ export default function Footer() {
                             © 2023 • DesignTheFuture
                         </p>
                     </div>
-                    <Link target='_blank' href="//instagram.com/designthefuture.in" className={styles.InstagramLink}>
+                    <Link target='_blank' href="instagram.com/designthefuture.in" className={styles.InstagramLink}>
                         <svg className={styles.Logo} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 47" fill="none">
                             <path d="M16.7662 7.98047C11.7563 7.98047 7.63916 12.092 7.63916 17.1075V29.8942C7.63916 34.9041 11.7507 39.0212 16.7662 39.0212H29.5529C34.5628 39.0212 38.6799 34.9097 38.6799 29.8942V17.1075C38.6799 12.0976 34.5683 7.98047 29.5529 7.98047H16.7662ZM16.7662 10.8024H29.5529C33.0417 10.8024 35.858 13.6187 35.858 17.1075V29.8942C35.858 33.383 33.0417 36.1993 29.5529 36.1993H16.7662C13.2774 36.1993 10.461 33.383 10.461 29.8942V17.1075C10.461 13.6187 13.2774 10.8024 16.7662 10.8024ZM31.4929 13.8888C30.7819 13.8888 30.2143 14.4565 30.2143 15.1675C30.2143 15.8784 30.7819 16.4461 31.4929 16.4461C32.2039 16.4461 32.7716 15.8784 32.7716 15.1675C32.7716 14.4565 32.2039 13.8888 31.4929 13.8888ZM23.1595 15.0352C18.5023 15.0352 14.6939 18.8436 14.6939 23.5008C14.6939 28.1581 18.5023 31.9665 23.1595 31.9665C27.8168 31.9665 31.6252 28.1581 31.6252 23.5008C31.6252 18.8436 27.8168 15.0352 23.1595 15.0352ZM23.1595 17.8571C26.2956 17.8571 28.8033 20.3648 28.8033 23.5008C28.8033 26.6369 26.2956 29.1446 23.1595 29.1446C20.0235 29.1446 17.5158 26.6369 17.5158 23.5008C17.5158 20.3648 20.0235 17.8571 23.1595 17.8571Z" fill="#888888" />
                         </svg>

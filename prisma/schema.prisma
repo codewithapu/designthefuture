@@ -9,16 +9,20 @@ datasource db {
 }
 
 model User {
-  id            Int    @id @default(autoincrement())
-  name          String
-  email         String
-  contactNumber String
+  id             Int      @id @default(autoincrement())
+  name           String
+  email          String
+  contactNumber  String
+  username       String   @unique
+  updateCount    Int      @default(0)
+  lastUpdateDate DateTime @default(now())
 }
 
 model Ticket {
   id            Int       @id @default(autoincrement())
   eventId       Int
   userId        Int
+  qrCode        String
   paymentId     Int?
   paymentStatus String?
   paymentDate   DateTime?
@@ -30,4 +34,11 @@ model Payment {
   amount        Decimal
   paymentStatus String
   paymentDate   DateTime @default(now())
+}
+
+model Event {
+  id    Int      @id @default(autoincrement())
+  name  String
+  date  DateTime
+  venue String
 }

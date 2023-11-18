@@ -1,0 +1,367 @@
+@mixin Smooth {
+    transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@mixin RegularFont17px{
+    font-family: Inter;
+
+    font-size: 1.65rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 22.5px */
+    letter-spacing: 0px;
+}
+
+@mixin InputBar{
+    border-radius: 10px;
+    color: #474747;
+    font-family: Inter;
+    font-size: 1.7rem;
+    border: 3px solid transparent;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.3px;
+    // text-transform: lowercase;
+    padding: 1.5rem 2rem;
+    width: 100%;
+    background: #eaeaea;
+    
+    ::placeholder {
+        color: #bcc1cb;
+    }
+    &:focus {
+        background: #fff;
+        border: 3px solid #111;
+        color: #060622;
+
+    }
+}
+
+@mixin RegularButton {
+    @include RegularFont17px;
+    cursor: pointer;
+    border-radius: 10px;
+
+    color: #fff;
+
+    border: 2px solid transparent;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    text-transform: lowercase;
+    // padding: 1.5rem 2rem;
+    height: 5.4rem;
+    width: 100%;
+    background: #111;
+    @include Smooth();
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background: #000000;
+    }
+}
+
+@mixin ButtonSecondary {
+    border-radius: 10px;
+    cursor: pointer;
+    color: #111;
+    @include RegularFont17px;
+
+    border: 2px solid transparent;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    text-transform: lowercase;
+    padding: 1.5rem 2rem;
+    width: 100%;
+    background: #fff;
+    @include Smooth();
+    &:hover {
+        background-color: #eaeaea;
+    }
+}
+
+.validationError {
+    z-index: 200;
+    color: #fa3737;
+    text-align: center;
+}
+
+.OverlayContainer {
+    z-index: 100;
+    height: 100%;
+    // padding: 10rem;
+}
+
+.CreateOverlayContainer {
+    z-index: 100vh;
+    // height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15rem;
+    z-index: 200;
+}
+
+.EditOverlay {
+    z-index: 200;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 45rem;
+    gap: 3rem;
+
+    .BurnerCreatorLogo {
+        height: 10rem;
+    }
+
+    .InputFields {
+        z-index: 200;
+        width: 100%;
+        gap: 0.4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .InputBar {
+            @include InputBar();
+        }
+    }
+
+    .Btns {
+        z-index: 200;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        .UpdateBtn {
+            @include RegularButton();
+        }
+
+        .Cancel {
+            @include ButtonSecondary();
+        }
+    }
+
+    .Terms {
+        z-index: 200;
+        color: #8d929c;
+        text-align: center;
+        // font-family: Plus Jakarta Sans;
+        font-family: Inter;
+
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%; /* 22.5px */
+        letter-spacing: -0.15px;
+        // text-transform: lowercase;
+        .InlineLink {
+            text-underline-offset: 0.2rem;
+            color: #0033ff;
+            text-decoration: underline;
+        }
+    }
+}
+
+.Wraper {
+    z-index: 10;
+    margin-top: 8rem;
+    // padding: 0rem 2rem 0rem 2rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 4rem;
+
+    @media screen and (max-width: 800px) {
+        padding: 0rem 1rem;
+        margin-top: 9rem;
+        // margin-top: 15rem;
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 0rem 1rem;
+        // margin-top: 10rem;
+    }
+
+    .Header {
+        // background-color: #0e0e0e;
+        height: 20rem;
+        width: 100%;
+        max-width: 200rem;
+        border-bottom-left-radius: 5rem;
+        border-bottom-right-radius: 5rem;
+
+        // background-color: #0e0e0e;
+        background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 0C6.716 0 0 6.716 0 15c8.284 0 15-6.716 15-15zM0 15c0 8.284 6.716 15 15 15 0-8.284-6.716-15-15-15zm30 0c0-8.284-6.716-15-15-15 0 8.284 6.716 15 15 15zm0 0c0 8.284-6.716 15-15 15 0-8.284 6.716-15 15-15z' fill='%2393ac92' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+        .Top {
+            margin-top: 5rem;
+            padding: 0rem 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .EditButton {
+                padding: 0.6rem;
+                height: 6rem;
+                border-radius: 20rem;
+                cursor: pointer;
+                background: #a3ff57;
+                border: none;
+                width: 4rem;
+                @include Smooth();
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                display: none;
+
+                .EditButtonIcon {
+                    height: 4rem;
+                }
+
+                &:hover {
+                    border-radius: 10rem;
+                    background-color: #6bdc10;
+                }
+            }
+
+            .BackBtn {
+                display: flex;
+                align-items: center;
+                display: none;
+                justify-content: center;
+                height: 4.5rem;
+                width: 3rem;
+                border-radius: 10rem;
+                background-color: #a3ff57;
+                svg {
+                    height: 4rem;
+                    path {
+                        fill: #000;
+                        opacity: 1;
+                    }
+                }
+                @include Smooth();
+                &:hover {
+                    width: 4.5rem;
+                    background-color: #6bdc10;
+                }
+
+                &:hover svg {
+                    width: 5rem;
+                }
+            }
+        }
+
+        .ImageContainer {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .UserAvatar {
+                border-radius: 10rem;
+                border: 7px solid #0000003b;
+                height: 17rem;
+            }
+        }
+    }
+
+    .About {
+        margin-top: 5rem;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.2rem;
+        .Badge {
+            text-transform: uppercase;
+            color: #787878;
+            // font-family: Plus Jakarta Sans;
+            font-family: Inter;
+
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 100%; /* 0.9rem */
+            letter-spacing: 0.09rem;
+        }
+
+        .UserName {
+            color: #ffffffe8;
+
+            // font-family: Urbanist;
+            font-family: Inter;
+
+            font-size: 2.4rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 100%; /* 2.1412rem */
+            letter-spacing: 0rem;
+            text-transform: lowercase;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+
+            .Verified {
+                height: 15px;
+                width: 15px;
+            }
+        }
+
+        .Name {
+            color: #c0c0c0cc;
+            // font-family: Urbanist;
+            font-family: Inter;
+
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 100%;
+            letter-spacing: -0.02rem;
+            // text-transform: lowercase;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+    }
+
+    .ActionButtons {
+        .EditBtn {
+            cursor: pointer;
+            border-radius: 10px;
+            color: #c7c7c7;
+            // font-family: Urbanist;
+            font-family: Inter;
+
+            font-size: 1.7rem;
+            border: 2px solid transparent;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            // letter-spacing: -0.01rem;
+            text-transform: lowercase;
+            padding: 1.5rem 2rem;
+            width: 100%;
+            background: #111;
+        }
+    }
+}
